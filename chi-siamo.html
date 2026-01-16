@@ -47,11 +47,13 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
+            background: linear-gradient(135deg, rgba(20, 20, 35, 0.98) 0%, rgba(15, 10, 25, 0.98) 100%),
+                radial-gradient(ellipse at right, rgba(102, 126, 234, 0.15) 0%, transparent 60%);
+            backdrop-filter: blur(15px);
+            padding: 1.5rem 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .navbar .container {
@@ -431,7 +433,8 @@
                     <div class="team-role"></div>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo"><img src="documenti/anto.png" alt="Antonio Falco"></div>
+                    <div class="team-photo"><img src="documenti/anto.png" alt="Antonio Falco"
+                            style="transform: scale(1.35); object-position: center;"></div>
                     <div class="team-name">Antonio Falco</div>
                     <div class="team-role"></div>
                 </div>
