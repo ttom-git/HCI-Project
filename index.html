@@ -247,7 +247,7 @@
             position: absolute;
             left: 50%;
             top: 0;
-            bottom: 0;
+            height: calc(100% - 6rem);
             width: 2px;
             background: linear-gradient(180deg,
                     rgba(102, 126, 234, 0.5) 0%,
@@ -479,6 +479,23 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .nav-buttons {
+                display: none;
+                /* Hide buttons in mobile view if they clutter, or adjust */
+                /* For now, just let them stack or be hidden if necessary. 
+                   Actually, let's keep them visible but perhaps smaller or handled by flex-wrap if needed. 
+                   However, user did not ask for mobile changes. 
+                   Let's just add the class definition before the media query or inside it if needed. 
+                   The previous buttons were visible. I should keep them visible.
+                */
+            }
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
         }
     </style>
 </head>
@@ -498,13 +515,26 @@
             </div>
             <ul class="nav-menu" id="navMenu">
             </ul>
-            <a href="https://github.com/ttom-git/HCI-Project" class="github-btn" target="_blank">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.840 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-                GitHub
-            </a>
+            <div class="nav-buttons">
+                <a href="https://github.com/ttom-git/HCI-Project" class="github-btn" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.840 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.figma.com/design/vNFRZcoQSiFodI3xCACsKX/prototipo-High-fidelity?node-id=0-1&t=eagTlqi3PCJwAe3s-1"
+                    class="github-btn" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z" />
+                        <path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z" />
+                        <path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z" />
+                        <path d="M12 4c0-2.208 1.792-4 4-4s4 1.792 4 4-1.792 4-4 4-4-1.792-4-4z" />
+                        <path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z" />
+                    </svg>
+                    Prototipo
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -518,6 +548,27 @@
                     <a href="chi-siamo.html" class="btn btn-primary">Chi siamo</a>
                     <a href="#contatti" class="btn btn-secondary">Contattaci</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Presentation -->
+    <section style="padding: 80px 0;">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title">Presentazione del <span class="gradient-text">Progetto</span></h2>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+             padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+             border-radius: 8px; will-change: transform;">
+                <iframe loading="lazy"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https://www.canva.com/design/DAG-TLg-wYQ/o7RBUsBu1Gha0rKJvv9voQ/view?embed"
+                    allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://www.canva.com/design/DAG-TLg-wYQ/o7RBUsBu1Gha0rKJvv9voQ/view?utm_content=DAG-TLg-wYQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+                    target="_blank" rel="noopener" class="delivery-link">Presentazione Finale - HCI</a>
+                <span style="color: var(--text-secondary); margin-left: 0.5rem;"></span>
             </div>
         </div>
     </section>
@@ -691,6 +742,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
